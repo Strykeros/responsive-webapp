@@ -1,0 +1,238 @@
+html{
+    height: 100%;
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.logo img{
+    height: 25px;
+}
+
+.logo span{
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;  
+}
+
+header{
+    height: 60px;
+    background-color: #1976d2;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .menu-button{
+    display: none;
+}
+
+main{
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    background-color: #1161b1;
+    height: 100%;
+    width: 225px;
+    padding: 20px 0 20px 20px;
+    box-sizing: border-box;
+}
+
+article{
+    width: 100%;
+}
+
+aside a{
+    opacity: 0.6;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+aside a i{
+    margin-right: 10px;
+}
+
+aside a:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+aside a:last-child{
+    margin: 0;
+}
+
+@media (max-width: 1024px){
+    aside{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    header .menu-button{
+        font-size: 36px;
+        color: #fff;
+        display: block;
+    }
+
+    aside a{
+        font-size: 24px;
+    }
+
+    aside a .material-icons{
+        display: none;
+    }
+
+    aside.hide{
+        display: none;
+    }
+
+    .sticky{
+        position: fixed;
+        top: 0;
+        width: 100%
+    }
+
+    .sticky2{
+        position: fixed;
+        top: 0;
+        width: 100%
+    }
+
+}
+/**
+ * =========================
+ * MOBILE FIRST APPROACH
+ * =========================
+ */
+
+.statistics {
+    margin: 20px 20px 0 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.statistics div {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px #888;
+
+    color: #fff;
+    font-size: 26px;
+    padding: 25px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.figure {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.statistics div:nth-child(1) {
+    background-color: #00C853;
+}
+
+.statistics div:nth-child(2) {
+    background-color: #DD2C00;
+}
+
+.statistics div:nth-child(3) {
+    background-color: #F9A825;
+}
+
+.statistics div:nth-child(4) {
+    background-color: #6200EA;
+}
+
+@media (min-width: 1024px) {
+    .statistics div {
+        width: 24%;
+        font-size: 20px;
+    }
+
+    .figure {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 600px) and (max-width:1024px) {
+    .statistics div {
+        width: 49%;
+        font-size: 20px;
+    }
+}
+
+.component{
+    width: calc(100% - 40px);
+    border-radius: 1px;
+    margin: 20px;
+    border: solid 1px #888;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.component-header{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.course > div{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 60px;   
+    background-color: #ccc;     
+    color: #555;
+    font-size: 20px;
+}
+
+.course > div:nth-child(1){
+    grid-template-columns: 10% 60% 30%;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.course > div:nth-child(1) > div:nth-child(1){
+    color: #888;
+    font-size: 16px;
+}
+
+.course > div > div{
+    display: flex;
+    align-items: center;
+}
+
+.course.hide > div:not(:first-child){
+    display: none;
+}
